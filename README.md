@@ -4,7 +4,10 @@ This is a ROS package for 2D object detection, which simply utilizes the toolbox
 ### Requirements
 
 - ROS Melodic
-- Python 3.6+, PyTorch 1.3+, CUDA 9.2+ and [MMCV](https://mmcv.readthedocs.io/en/latest/#installation)
+- Python 3.7+
+- PyTorch
+- CUDA 10.2+ 
+- [MMCV](https://mmcv.readthedocs.io/en/latest/#installation)
 
 ### Installation
 
@@ -80,16 +83,3 @@ This is a ROS package for 2D object detection, which simply utilizes the toolbox
 - `~debug_image`: publish the debug image
 - `~objects`: publish the inference result, containing the information of detected objects
 - `~image`: subscribe the input image. The default one is ''/xtion/rgb/image_raw' for TIAGo
-
-### Example
-
-If you are using the robot TIAGo, you could
-
-```shell
-source ~/mmdet/bin/activate # in the python3 virtual env
-roslaunch mmdetection_ros mmdetector.launch
-```
-
-TIAGo will continously do the inference on the camera image and publish the detection results
-
-![result](README.assets/result.png)
