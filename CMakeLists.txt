@@ -10,7 +10,7 @@ project(mmdetection_ros)
 find_package(catkin REQUIRED COMPONENTS
   # roscpp
   # actionlib
-  # cv_bridge
+  cv_bridge
   # image_transport
   sensor_msgs
   # control_msgs
@@ -71,10 +71,10 @@ find_package(OpenCV REQUIRED
 #   Service1.srv
 #   Service2.srv
 # )
-add_service_files(
-  FILES
-    mmdetSrv.srv
-)
+#add_service_files(
+#  FILES
+#    mmdetSrv.srv
+#)
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -88,9 +88,9 @@ add_service_files(
 #   DEPENDENCIES
 #   std_msgs  # Or other packages containing msgs
 # )
-generate_messages(
-  DEPENDENCIES std_msgs sensor_msgs vision_msgs
-)
+#generate_messages(
+#  DEPENDENCIES std_msgs sensor_msgs vision_msgs
+#)
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -183,10 +183,10 @@ SYSTEM
 #   scripts/my_python_script
 #   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 # )
-catkin_install_python(PROGRAMS 
-	scripts/mmdetector.py
-	DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
+#catkin_install_python(PROGRAMS 
+#  scripts/faster_rcnn_r50_fpn_1x_coco_pepper.py
+#	DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+#)
 
 ## Mark executables for installation
 ## See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html
